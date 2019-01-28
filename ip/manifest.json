@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "查看我的IP",
+    "version": "1.0",
+    "description": "查看我的电脑当前的公网IP",
+   
+    "browser_action": {
+       
+        "default_title": "查看我的IP",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "*://ip111.cn/*",
+        "http://45.32.164.128/ip.php"
+    ]
+}
