@@ -10,8 +10,8 @@
     },
     "content_scripts": [
         {
-            "matches": ["*://*/*"],
-            "js": ["js/my_ip.js","js/js3.js"],
+            "matches": ["*://translate.google.cn/*"],
+            "js": ["js/main.js"],
             "run_at": "document_start"
         }
     ]
