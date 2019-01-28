@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清空所有文本型输入框</title>
+</head>
+<body>
+    <form id="clearFrom">
+        <input type="button" value="清空所有文本" id="clearText"/>
+        <input type="text" value="文本一"/>
+        <input type="text" value="文本二"/>
+        <input type="text" value="文本三"/>
+        <textarea>文本5</textarea>
+    </form>
+<script>
+    var _clearText=document.getElementById("clearText");
+    _clearText.onclick=function(){
+        var _elements=document.getElementById("clearFrom").elements,
+                _elementsLen=_elements.length,
+                _ei=null,
+                i=0;
+        for(;i<_elementsLen;i++){
+            _ei=_elements[i];
+            //如果是文本类型，将其修改为空
+            (_ei.type=="text"||_ei.type=="textarea")&&(_ei.value="");
+        }
+    }
+</script>
+</body>
+</html>

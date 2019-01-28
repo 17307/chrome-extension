@@ -3,6 +3,11 @@
     "name": "永远点不到的搜索按钮",
     "version": "1.0",
     "description": "让你永远也点击不到Google的搜索按钮",
+    "browser_action": {
+
+        "default_title": "button",
+        "default_popup": "popup.html"
+    },
     "content_scripts": [
         {
             "matches": ["*://www.baidu.com/"],

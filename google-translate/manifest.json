@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "translate",
+    "version": "1.0",
+    "description": "google-translate",
+    "browser_action": {
+
+        "default_title": "translate",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["js/my_ip.js","js/js3.js"],
+            "run_at": "document_start"
+        }
+    ]
+}
