@@ -1,0 +1,16 @@
+{
+    "name":"Google",
+    "version":"0.2.0",
+    "manifest_version":2,
+    "description":"Google",
+    "background":{"scripts":["js/jquery-2.0.0.min.js","js/background.js"]},
+    "browser_action":{
+      "default_title":"Google",
+      "default_popup":"index.html"
+    },
+    "content_scripts":[{
+      "matches":["https://www.jianshu.com/*"],
+      "js":["js/jquery-2.0.0.min.js","js/main.js"]
+    }],
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+  }
