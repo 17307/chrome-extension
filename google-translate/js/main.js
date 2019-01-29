@@ -1,9 +1,7 @@
 //接收来自popup.js的消息
 
 function deal_message(message){
-    
-
-    return message + '123';
+    return message ;
 }
 
 chrome.runtime.onMessage.addListener(

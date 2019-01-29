@@ -25,3 +25,9 @@ button_b.onclick = function(){
     content_tran.value = ''
 
 }
+
+var button_c = document.getElementById('back_ground')
+button_c.onclick = function(){
+    console.log('back')
+    window.open(chrome.extension.getURL('background.html'))
+}
