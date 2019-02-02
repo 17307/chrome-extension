@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "translate",
+    "version": "1.0",
+    "description": "in2c",
+    "browser_action": {
+        "default_title": "in2c",
+    },
+    "web_accessible_resources": ["js/inject.js"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["js/main.js"],
+            "run_at": "document_end"
+        }
+    ]
+}
