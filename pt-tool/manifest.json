@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "demo",
+    "version": "1.0.0",
+    "description": "pt-tool",
+
+    "background":
+    {
+        "page": "background.html"
+    },
+    "browser_action": 
+    {
+        "default_title": "pt-tool",
+        "default_popup": "popup.html"
+    },
+    "permissions":
+    [
+        "http://127.0.0.1:5000/",
+        "tabs",
+        "storage"
+    ],
+    "content_scripts": 
+    [
+        {
+            "js": ["js/jquery.min.js", "js/main.js"],
+            "matches": ["<all_urls>"],
+            "run_at": "document_start"
+        }
+    ]
+}
